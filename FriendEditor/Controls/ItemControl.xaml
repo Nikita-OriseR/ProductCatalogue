@@ -1,0 +1,72 @@
+﻿<UserControl
+    x:Class="ProductCatalogue.Controls.ItemControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d:DesignHeight="600"
+    d:DesignWidth="300"
+    mc:Ignorable="d">
+    <UserControl.Resources>
+        <Thickness x:Key="InfoMargin">0,10,0,0</Thickness>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Image
+                Width="100"
+                Height="100"
+                Source="/Assets/Item.png" />
+        </Grid>
+
+        <StackPanel Grid.Column="1" Margin="10,0,0,0">
+            <TextBlock Text="Name" />
+            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.ColumnSpan="2">
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Id" />
+            <TextBlock FontWeight="Bold" Text="{Binding Id}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Id price" />
+            <TextBlock FontWeight="Bold" Text="{Binding IdPrice}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Code" />
+            <TextBlock FontWeight="Bold" Text="{Binding Code}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Name" />
+            <TextBlock FontWeight="Bold" Text="{Binding Name}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Barcode" />
+            <TextBlock FontWeight="Bold" Text="{Binding Barcode}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Quantity" />
+            <TextBlock FontWeight="Bold" Text="{Binding Quantity}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Model" />
+            <TextBlock FontWeight="Bold" Text="{Binding Model}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Sort" />
+            <TextBlock FontWeight="Bold" Text="{Binding Sort}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Color" />
+            <TextBlock FontWeight="Bold" Text="{Binding Color}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Size" />
+            <TextBlock FontWeight="Bold" Text="{Binding Size}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Wight" />
+            <TextBlock FontWeight="Bold" Text="{Binding Wight}" />
+
+            <TextBlock Margin="{StaticResource InfoMargin}" Text="Changes date" />
+            <TextBlock FontWeight="Bold" Text="{Binding DateChanges}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
